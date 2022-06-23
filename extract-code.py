@@ -1,15 +1,11 @@
 #!/usr/bin/env python
 
-
 import argparse
-import re
 import os
 import os.path
 import sys
-import time
 from collections import namedtuple
-from itertools import count, takewhile, dropwhile
-from urllib import request
+from itertools import takewhile, dropwhile
 
 def get_argparser():
     parser = argparse.ArgumentParser(
