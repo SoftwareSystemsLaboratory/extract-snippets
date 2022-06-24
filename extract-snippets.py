@@ -9,7 +9,7 @@ from itertools import takewhile, dropwhile
 
 def get_argparser():
     parser = argparse.ArgumentParser(
-            description="extract lines from source file")
+            description="extract subset of lines from source file")
 
     # Global Parsing options (for all subcommands)
 
@@ -79,6 +79,7 @@ def get_filename(args, extract_method):
 
     base_filename = base_filename.replace("_","-")
     base_filename = base_filename.replace(".","-")
+    base_filename = base_filename.replace(":","-")
 
     if not args.name:
        return ".".join([base_filename, args.snip_extension])
