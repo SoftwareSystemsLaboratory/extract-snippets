@@ -108,8 +108,12 @@ def find_wrapper(text, ss):
 def extract_delimiters_simple(args, infile):
     # remove trailing whitespace
     data = map(lambda line : line.rstrip(), infile)
+
+    # remove leading blank lines (as it messes up line numbers)
+    data2 = dropwhile(lambda text : len(text) == 0, data)
+
     # drop everything up to start string
-    rest = dropwhile(lambda text : text.find(args.after_string) < 0, data)
+    rest = dropwhile(lambda text : text.find(args.after_string) < 0, data2)
     next(rest)
 
     # take everything up to string
