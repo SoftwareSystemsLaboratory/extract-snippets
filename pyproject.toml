@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "extract-snippets"
-version = "0.1.0"
+version = "v0.1"
 description = "Simple snippet extractor for code snippets in LaTeX (primarily) Minted/Verbatim environments"
 authors = ["George K. Thiruvathukal <gkt@cs.luc.edu>"]
 
